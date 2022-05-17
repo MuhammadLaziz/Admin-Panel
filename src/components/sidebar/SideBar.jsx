@@ -12,6 +12,7 @@ import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined
 import SettingsApplicationsRoundedIcon from '@mui/icons-material/SettingsApplicationsRounded';
 import LoginRoundedIcon from '@mui/icons-material/LoginRounded';
 import AddBusinessIcon from '@mui/icons-material/AddBusiness';
+import { Link } from 'react-router-dom';
 
 const SideBar = () => {
   return (
@@ -23,19 +24,25 @@ const SideBar = () => {
         <div className="center">
             <ul>
                 <p className="title">MAIN</p>
-                <li>
-                    <DashboardIcon className='icon' />
-                    <span>Dashboard</span>
-                </li>
+                <Link to="/" style={{textDecoration: 'none'}}>
+                    <li>
+                        <DashboardIcon className='icon' />
+                        <span>Dashboard</span>
+                    </li>
+                </Link>
                 <p className="title">LISTS</p>
-                <li>
-                    <PersonOutlineIcon className='icon' />
-                    <span>Users</span>
-                </li>
-                <li>
-                    <AddBusinessIcon className='icon' />
-                    <span>Products</span>
-                </li>
+                <Link to="/users" style={{textDecoration: 'none'}}>    
+                    <li>
+                        <PersonOutlineIcon className='icon' />
+                        <span>Users</span>
+                    </li>
+                </Link>
+                <Link to="/users/new" style={{textDecoration: 'none'}}>
+                    <li>
+                        <AddBusinessIcon className='icon' />
+                        <span>Products</span>
+                    </li>
+                </Link>
                 <li>
                     <CreditCardOutlinedIcon className='icon' />
                     <span>Orders</span>

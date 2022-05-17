@@ -1,8 +1,16 @@
-import React from 'react'
+import './list.scss'
+import Navbar from '../../components/navbar/Navbar'
+import SideBar from '../../components/sidebar/SideBar'
 
 const List = () => {
   return (
-    <div>List</div>
+    <div className='list'>
+      <SideBar />
+      <div className="listContainer">
+        <Navbar />
+        Data Table
+      </div>
+    </div>
   )
 }
 
